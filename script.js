@@ -1,3 +1,8 @@
+let formFilme = document.getElementById('formFilme')
+formFilme.onsubmit = function(event) {
+    event.preventDefault();
+}
+
 function addFilme() {
     var titulo = document.getElementById('titulo').value
     var diretor = document.getElementById('diretor').value
