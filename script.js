@@ -1,13 +1,13 @@
-let formFilme = document.getElementById('formFilme')
+let formFilme = document.getElementById('formFilme');
 formFilme.onsubmit = function(event) {
     event.preventDefault();
 }
 
 function addFilme() {
-    var titulo = document.getElementById('titulo').value
-    var diretor = document.getElementById('diretor').value
-    var ano = document.getElementById('ano').value
-    var lista = document.getElementById('lista')
+    var titulo = document.getElementById('titulo').value;
+    var diretor = document.getElementById('diretor').value;
+    var ano = document.getElementById('ano').value;
+    var lista = document.getElementById('lista');
 
     class Filme {
         constructor(t, d , a) {
@@ -22,11 +22,11 @@ function addFilme() {
     }
 
     if(titulo === "" || diretor === "" || isNaN(ano)) {
-        alert('Preencha Todos os Campos')
+        alert('Preencha Todos os Campos');
     } else {
-        let novoFilme = new Filme(titulo, diretor, ano)
-        let dadosDoFilme = novoFilme.dadosFilme()
-        lista.innerHTML = lista.innerHTML + dadosDoFilme
+        let novoFilme = new Filme(titulo, diretor, ano);
+        let dadosDoFilme = novoFilme.dadosFilme();
+        lista.innerHTML = lista.innerHTML + dadosDoFilme;
     }
 
 }
